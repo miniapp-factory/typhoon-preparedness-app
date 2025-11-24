@@ -128,7 +128,6 @@ export default function RiskEstimatorForm() {
       <div>
         <Label htmlFor="houseType">House Type</Label>
         <Select
-          id="houseType"
           value={state.houseType}
           onValueChange={(v) => setState((s) => ({ ...s, houseType: v }))}
         >
@@ -161,7 +160,6 @@ export default function RiskEstimatorForm() {
       <div>
         <Label htmlFor="roofCondition">Roof Condition</Label>
         <Select
-          id="roofCondition"
           value={state.roofCondition}
           onValueChange={(v) => setState((s) => ({ ...s, roofCondition: v }))}
         >
@@ -178,7 +176,6 @@ export default function RiskEstimatorForm() {
       <div>
         <Label htmlFor="floodHeight">Past Flood Height</Label>
         <Select
-          id="floodHeight"
           value={state.floodHeight}
           onValueChange={(v) => setState((s) => ({ ...s, floodHeight: v }))}
         >

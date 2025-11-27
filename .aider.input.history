@@ -268,3 +268,49 @@
 +
 +The simulation area should be black, roof should be orange, wind should be blue, house should be white
 +
+
+# 2025-11-27 16:24:18.561696
++Generate a full, valid React/Next.js TSX component named SimulationBox.
++
++IMPORTANT RULES:
++- The output must be complete and must COMPILE.
++- Do NOT omit any braces, parentheses, return statements, or closing tags.
++- Do NOT generate partial code blocks.
++- Do NOT leave “…“ or placeholders that break syntax.
++- Ensure all JSX tags, { }, ( ), and return statements are fully closed.
++- Make sure the file ends with a final } and no dangling elements.
++- Follow strict TypeScript/React syntax.
++
++FEATURES I WANT:
++- A “Typhoon Simulation” UI
++- An input where the user selects rainfall intensity (light, moderate, heavy, extreme)
++- A simulated output box that updates with a risk level
++- Simple state handling with useState
++- No external libraries except React
++- Clean JSX, no comments, no errors
++
++Return ONLY the complete TSX code.
++
+
+# 2025-11-27 16:24:18.562571
++Generate a full, valid React/Next.js TSX component named SimulationBox.
++
++IMPORTANT RULES:
++- The output must be complete and must COMPILE.
++- Do NOT omit any braces, parentheses, return statements, or closing tags.
++- Do NOT generate partial code blocks.
++- Do NOT leave “…“ or placeholders that break syntax.
++- Ensure all JSX tags, { }, ( ), and return statements are fully closed.
++- Make sure the file ends with a final } and no dangling elements.
++- Follow strict TypeScript/React syntax.
++
++FEATURES I WANT:
++- A “Typhoon Simulation” UI
++- An input where the user selects rainfall intensity (light, moderate, heavy, extreme)
++- A simulated output box that updates with a risk level
++- Simple state handling with useState
++- No external libraries except React
++- Clean JSX, no comments, no errors
++
++Return ONLY the complete TSX code.
++

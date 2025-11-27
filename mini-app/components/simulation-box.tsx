@@ -1,61 +1,50 @@
 "use client";
 
-import { useCallback } from "react";
+import { useState } from "react";
 
-type Props = { score: number };
+type RainfallIntensity = "light" | "moderate" | "heavy" | "extreme";
 
-export default function SimulationBox({ score }: Props) {
+export default function SimulationBox() {
+  const [intensity, setIntensity] = useState<RainfallIntensity>("light");
 
-  const getLevel = () => {
-    if (score <= 4) return "Low";
-    if (score <= 8) return "Moderate";
-    if (score <= 12) return "High";
-    return "Severe";
+  const getRiskLevel = (intensity: RainfallIntensity) => {
+    switch (intensity) {
+      case "light":
+        return "Low";
+      case "moderate":
+        return "Moderate";
+      case "heavy":
+        return "High";
+      case "extreme":
+        return "Severe";
+      default:
+        return "Low";
+    }
   };
 
-  const level = getLevel();
-
-  // Map level to wind speed factor
-  const windFactor = {
-    Low: 0.2,
-    Moderate: 0.5,
-    High: 0.8,
-    Severe: 1.0,
-  }[level];
+  const riskLevel = getRiskLevel(intensity);
 
   return (
-    <div className="mt-6 p-4 bg-black rounded-lg">
-      <h2 className="text-white mb-4">Simulation: {level} Risk</h2>
-      <div className="relative w-full h-64 bg-black rounded-md overflow-hidden">
-        {/* House */}
-        <div
-          className="absolute bottom-0 left-1/2 transform -translate-x-1/2"
-          style={{
-            width: "120px",
-            height: "80px",
-            backgroundColor: "#FFFFFF",
-            borderTop: "80px solid #FFFFFF",
-            borderLeft: "60px solid transparent",
-            borderRight: "60px solid transparent",
-          }}
+    <div className="mt-6 p-4 bg-black rounded-lg text-white">
+      <h2 className="text-2xl mb-4">Typhoon Simulation</h2>
+      <label className="block mb-2">
+        <span className="mr-2">Rainfall Intensity:</span>
+        <select
+          value={intensity}
+          onChange={(e) => setIntensity(e.target.value as RainfallIntensity)}
+          className="bg-white text-black rounded px-2 py-1"
         >
-          {/* Roof */}
-          <div
-            style={{
-              position: "absolute",
-              top: "-80px",
-              left: "-60px",
-              width: "240px",
-              height: "80px",
-              backgroundColor: "#FFA500",
-            }}
-          />
-        </div>
-          <div className="relative w-full h-64 bg-black rounded-md overflow-hidden flex items-center justify-center">
-            <p className="text-white text-center">
-              Wind simulation is not available in this build. The wind speed factor is {windFactor}.
-            </p>
-          </div>
-          </div>
-      );
-    }
+          <option value="light">Light</option>
+          <option value="moderate">Moderate</option>
+          <option value="heavy">Heavy</option>
+          <option value="extreme">Extreme</option>
+        </select>
+      </label>
+      <div className="mt-4 p-4 bg-gray-800 rounded">
+        <p className="text-lg">
+          Risk Level: <span className="font-semibold">{riskLevel}</span>
+        </p>
+      </div>
+    </div>
+  );
+}

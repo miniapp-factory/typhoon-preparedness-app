@@ -1,15 +1,10 @@
 "use client";
 
 import { useCallback } from "react";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
 
 type Props = { score: number };
 
 export default function SimulationBox({ score }: Props) {
-  const particlesInit = useCallback(async (engine: any) => {
-    await loadFull(engine);
-  }, []);
 
   const getLevel = () => {
     if (score <= 4) return "Low";
@@ -57,42 +52,13 @@ export default function SimulationBox({ score }: Props) {
           />
         </div>
         {/* Wind particles */}
-        <Particles
-          id="tsparticles"
-          init={particlesInit}
-          options={{
-            background: { color: { value: "#000000" } },
-            fpsLimit: 60,
-            interactivity: {
-              detectsOn: "canvas",
-              events: {
-                onHover: { enable: true, mode: "repulse" },
-                resize: true,
-              },
-              modes: {
-                repulse: { distance: 200, duration: 0.4 },
-              },
-            },
-            particles: {
-              color: { value: "#0000FF" },
-              links: { enable: false },
-              move: {
-                direction: "right",
-                enable: true,
-                outModes: { default: "out" },
-                speed: windFactor * 5,
-                straight: true,
-              },
-              number: { value: 50, density: { enable: true, area: 800 } },
-              opacity: { value: 0.7 },
-              shape: { type: "circle" },
-              size: { value: 3 },
-            },
-            detectRetina: true,
-          }}
-          className="absolute inset-0"
-        />
-      </div>
-    </div>
-  );
-}
+        <div className="mt-6 p-4 bg-black rounded-lg">
+          <h2 className="text-white mb-4">Simulation: {level} Risk</h2>
+          <div className="relative w-full h-64 bg-black rounded-md overflow-hidden flex items-center justify-center">
+            <p className="text-white text-center">
+              Wind simulation is not available in this build. The wind speed factor is {windFactor}.
+            </p>
+          </div>
+        </div>
+      );
+    }

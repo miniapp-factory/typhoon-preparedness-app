@@ -408,3 +408,57 @@
 +
 +Rebuild the app following these rules.
 +
+
+# 2025-11-27 17:25:36.904394
++Regenerate the app with these strict rules:
++
++1. Any component that uses useState, useEffect, or browser APIs MUST begin with:
++"use client";
++
++2. The file components/simulation-box.tsx MUST start with:
++"use client";
++and export a complete TSX component.
++
++3. SimulationBox MUST accept a numeric prop named `score` if it is called as <SimulationBox score={score} />.
++Define it as:
++
++interface SimulationBoxProps {
++  score: number;
++}
++
++export default function SimulationBox({ score }: SimulationBoxProps) { ... }
++
++4. All components must output complete, valid TSX with no missing tags, braces, or parentheses.
++
++5. Do NOT generate partial code or placeholder code. Everything must compile in strict TypeScript mode.
++
++6. Ensure the app builds successfully under Next.js without webpack loader errors.
++
++Rebuild the entire app following these rules.
+
+# 2025-11-27 17:25:36.921656
++Regenerate the app with these strict rules:
++
++1. Any component that uses useState, useEffect, or browser APIs MUST begin with:
++"use client";
++
++2. The file components/simulation-box.tsx MUST start with:
++"use client";
++and export a complete TSX component.
++
++3. SimulationBox MUST accept a numeric prop named `score` if it is called as <SimulationBox score={score} />.
++Define it as:
++
++interface SimulationBoxProps {
++  score: number;
++}
++
++export default function SimulationBox({ score }: SimulationBoxProps) { ... }
++
++4. All components must output complete, valid TSX with no missing tags, braces, or parentheses.
++
++5. Do NOT generate partial code or placeholder code. Everything must compile in strict TypeScript mode.
++
++6. Ensure the app builds successfully under Next.js without webpack loader errors.
++
++Rebuild the entire app following these rules.

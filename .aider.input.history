@@ -314,3 +314,43 @@
 +
 +Return ONLY the complete TSX code.
 +
+
+# 2025-11-27 16:46:40.433750
++Generate a full, valid React/Next.js component in TSX.
++
++RULES (must follow all):
++- Include complete code with all props/interfaces defined.
++- No missing braces, parentheses, or JSX tags.
++- The component must COMPILE in strict TypeScript mode.
++- If the parent component uses <SimulationBox score={score} />,
++  then SimulationBox MUST accept and type that prop.
++- No partial code, no "..." placeholders.
++- End the file with a final }.
++
++FEATURE:
++- SimulationBox must accept a numeric 'score' prop and display
++  a simple disaster risk simulation based on that score.
++
+
+# 2025-11-27 16:46:40.435618
++Generate a full, valid React/Next.js component in TSX.
++
++RULES (must follow all):
++- Include complete code with all props/interfaces defined.
++- No missing braces, parentheses, or JSX tags.
++- The component must COMPILE in strict TypeScript mode.
++- If the parent component uses <SimulationBox score={score} />,
++  then SimulationBox MUST accept and type that prop.
++- No partial code, no "..." placeholders.
++- End the file with a final }.
++
++FEATURE:
++- SimulationBox must accept a numeric 'score' prop and display
++  a simple disaster risk simulation based on that score.
++
+
+# 2025-11-27 16:47:50.185188
++apply changes
+
+# 2025-11-27 16:47:50.185834
++apply changes

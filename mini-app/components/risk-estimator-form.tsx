@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import RiskResults from "./risk-results";
+import SimulationBox from "./simulation-box";
 
 type FormState = {
   houseType: string;
@@ -202,6 +203,7 @@ export default function RiskEstimatorForm() {
       </div>
       <Button onClick={calculateScore}>Calculate Risk</Button>
       {score !== null && <RiskResults score={score} />}
+      {score !== null && <SimulationBox score={score} />}
     </div>
   );
 }

@@ -354,3 +354,57 @@
 
 # 2025-11-27 16:47:50.185834
 +apply changes
+
+# 2025-11-27 17:05:53.282058
++Regenerate the entire mini-app with the following strict rules:
++
++1. Every React component must be complete, valid TSX with no missing braces, parentheses, or JSX tags.
++
++2. The component <SimulationBox /> MUST accept a numeric prop named `score`.
++   It must be defined like:
++
++   interface SimulationBoxProps {
++     score: number;
++   }
++
++   export default function SimulationBox({ score }: SimulationBoxProps) { ... }
++
++3. In any file where <SimulationBox score={score} /> is used, the `score` prop must match this interface.
++
++4. Do not leave undefined props, incomplete components, or placeholder JSX.
++
++5. Ensure all TypeScript types are correct so the Next.js build succeeds with zero type errors.
++
++6. RiskEstimatorForm, RiskResults, and SimulationBox must all export default complete components.
++
++7. Return only fully valid compilable code. No pseudocode or partial blocks.
++
++Rebuild the app following these rules.
++
+
+# 2025-11-27 17:05:53.285104
++Regenerate the entire mini-app with the following strict rules:
++
++1. Every React component must be complete, valid TSX with no missing braces, parentheses, or JSX tags.
++
++2. The component <SimulationBox /> MUST accept a numeric prop named `score`.
++   It must be defined like:
++
++   interface SimulationBoxProps {
++     score: number;
++   }
++
++   export default function SimulationBox({ score }: SimulationBoxProps) { ... }
++
++3. In any file where <SimulationBox score={score} /> is used, the `score` prop must match this interface.
++
++4. Do not leave undefined props, incomplete components, or placeholder JSX.
++
++5. Ensure all TypeScript types are correct so the Next.js build succeeds with zero type errors.
++
++6. RiskEstimatorForm, RiskResults, and SimulationBox must all export default complete components.
++
++7. Return only fully valid compilable code. No pseudocode or partial blocks.
++
++Rebuild the app following these rules.
++

@@ -51,14 +51,11 @@ export default function SimulationBox({ score }: Props) {
             }}
           />
         </div>
-        {/* Wind particles */}
-        <div className="mt-6 p-4 bg-black rounded-lg">
-          <h2 className="text-white mb-4">Simulation: {level} Risk</h2>
           <div className="relative w-full h-64 bg-black rounded-md overflow-hidden flex items-center justify-center">
             <p className="text-white text-center">
               Wind simulation is not available in this build. The wind speed factor is {windFactor}.
             </p>
           </div>
-        </div>
+          </div>
       );
     }

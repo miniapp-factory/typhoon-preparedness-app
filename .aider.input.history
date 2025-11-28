@@ -580,3 +580,29 @@
 # 2025-11-28 15:15:10.533733
 +change the expected wind speed to be an input slider. from 0 - 300 wind speed
 +
+
+# 2025-11-28 15:39:20.496964
++After the user calculates the risk, I want the Typhoon Simulator Area to use a simple made with pixels on an html canvas. It will simulate the input windspeed of the user
++As the slider increases, the wind animation moves faster.
++
++At windspeed ≥ 120 kph, shake the house slightly.
++
++At windspeed ≥ 180 kph, the roof detaches and flies off in the wind.
++
++Redraw everything using requestAnimationFrame().
++
++do not use an external library
++
+
+# 2025-11-28 15:39:20.497289
++After the user calculates the risk, I want the Typhoon Simulator Area to use a simple made with pixels on an html canvas. It will simulate the input windspeed of the user
++As the slider increases, the wind animation moves faster.
++
++At windspeed ≥ 120 kph, shake the house slightly.
++
++At windspeed ≥ 180 kph, the roof detaches and flies off in the wind.
++
++Redraw everything using requestAnimationFrame().
++
++do not use an external library
++

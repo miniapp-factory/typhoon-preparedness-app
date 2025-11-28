@@ -193,12 +193,15 @@ export default function RiskEstimatorForm() {
       </div>
       <div>
         <Label htmlFor="windSpeed">Expected Wind Speed (km/h)</Label>
-        <Input
+        <p className="text-sm mb-1">Wind Speed: {state.windSpeed} kph</p>
+        <input
           id="windSpeed"
-          type="number"
-          value={state.windSpeed}
+          type="range"
+          min="0"
+          max="300"
+          value={Number(state.windSpeed)}
           onChange={(e) => setState((s) => ({ ...s, windSpeed: e.target.value }))}
-          placeholder="e.g., 120"
+          className="w-full"
         />
       </div>
       <Button onClick={calculateScore}>Calculate Risk</Button>

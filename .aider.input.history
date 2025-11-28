@@ -572,3 +572,11 @@
 +
 +The result should be a working mini simulator showing how stronger typhoon winds affect the house.
 +
+
+# 2025-11-28 15:15:10.533313
++change the expected wind speed to be an input slider. from 0 - 300 wind speed
++
+
+# 2025-11-28 15:15:10.533733
++change the expected wind speed to be an input slider. from 0 - 300 wind speed
++

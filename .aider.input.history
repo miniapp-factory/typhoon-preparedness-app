@@ -476,3 +476,99 @@
 +house -> white
 +roof -> Blue
 +
+
+# 2025-11-28 14:22:26.621889
++make the typhoon windspeed to be a slider.
++and save the input
++Create a one-page Typhoon Wind Simulator using only HTML, CSS, and JavaScript with no external libraries.
++
++The page should have:
++
++A title: “Typhoon Wind Simulator”.
++
++A slider input (0–300 kph) that represents typhoon wind speed.
++
++A numeric label showing the current slider value.
++
++An HTML <canvas> that draws a simple pixel-style scene:
++
++A small pixel-art house
++
++A roof that can detach or shake
++
++Pixel “wind lines” moving based on windspeed
++
++Use simple rectangles/pixels only (no images)
++
++Simulation Logic:
++
++As the slider increases, the wind animation moves faster.
++
++At windspeed ≥ 120 kph, shake the house slightly.
++
++At windspeed ≥ 180 kph, the roof detaches and flies off in the wind.
++
++Redraw everything using requestAnimationFrame().
++
++Requirements:
++
++No libraries
++
++All code in one HTML file
++
++Use clean, simple JavaScript
++
++Canvas size ~400×300
++
++Pixel aesthetic only
++
++The result should be a working mini simulator showing how stronger typhoon winds affect the house.
++
+
+# 2025-11-28 14:22:26.622957
++make the typhoon windspeed to be a slider.
++and save the input
++Create a one-page Typhoon Wind Simulator using only HTML, CSS, and JavaScript with no external libraries.
++
++The page should have:
++
++A title: “Typhoon Wind Simulator”.
++
++A slider input (0–300 kph) that represents typhoon wind speed.
++
++A numeric label showing the current slider value.
++
++An HTML <canvas> that draws a simple pixel-style scene:
++
++A small pixel-art house
++
++A roof that can detach or shake
++
++Pixel “wind lines” moving based on windspeed
++
++Use simple rectangles/pixels only (no images)
++
++Simulation Logic:
++
++As the slider increases, the wind animation moves faster.
++
++At windspeed ≥ 120 kph, shake the house slightly.
++
++At windspeed ≥ 180 kph, the roof detaches and flies off in the wind.
++
++Redraw everything using requestAnimationFrame().
++
++Requirements:
++
++No libraries
++
++All code in one HTML file
++
++Use clean, simple JavaScript
++
++Canvas size ~400×300
++
++Pixel aesthetic only
++
++The result should be a working mini simulator showing how stronger typhoon winds affect the house.
++

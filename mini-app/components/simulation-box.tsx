@@ -11,6 +11,8 @@ export default function SimulationBox({ windSpeed }: SimulationBoxProps) {
   const roofXRef = useRef(0);
   const roofYRef = useRef(0);
   const offsetRef = useRef(0);
+  const treeXRef = useRef(0);
+  const treeYRef = useRef(0);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -49,7 +51,7 @@ export default function SimulationBox({ windSpeed }: SimulationBoxProps) {
 
       // Roof detachment
       if (windSpeed >= 180) {
-        roofXRef.current += 1;
+        roofXRef.current -= 1;
         roofYRef.current -= 0.5;
       }
 
@@ -64,6 +66,26 @@ export default function SimulationBox({ windSpeed }: SimulationBoxProps) {
       ctx.closePath();
       ctx.fill();
 
+      // Tree
+      const treeX = houseX - 20;
+      const treeY = houseY;
+      const treeHeight = 20;
+      const treeWidth = 5;
+
+      // Tree detachment
+      if (windSpeed >= 180) {
+        treeXRef.current -= 1;
+        treeYRef.current -= 0.5;
+      }
+
+      const currentTreeX = treeX + treeXRef.current;
+      const currentTreeY = treeY + treeYRef.current;
+
+      ctx.fillStyle = "#228B22";
+      ctx.fillRect(currentTreeX, currentTreeY - treeHeight, treeWidth, treeHeight);
+      ctx.fillStyle = "#8B4513";
+      ctx.fillRect(currentTreeX + treeWidth / 2 - 2, currentTreeY, 4, 5);
+
       // Wind lines
       const lineCount = 10;
       const speed = Math.max(1, windSpeed / 10);
@@ -72,10 +94,10 @@ export default function SimulationBox({ windSpeed }: SimulationBoxProps) {
       ctx.strokeStyle = "#888";
       ctx.lineWidth = 2;
       for (let i = 0; i < lineCount; i++) {
-        const y = (i * 20 + offsetRef.current) % canvas.height;
+        const x = (i * 20 + offsetRef.current) % canvas.width;
         ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(canvas.width, y);
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, canvas.height);
         ctx.stroke();
       }
 

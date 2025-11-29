@@ -634,3 +634,23 @@
 +House type Should be color coded
 +wood = brown
 +cement = gray
+
+# 2025-11-29 06:43:29.348223
++Make it so that the environment changes depending on the Nearby Hazards input.
++Trees = more trees
++powerline = electrical powerlines ( with  2 pole  and wire connecting them)
++River/coast = River
++Loose debris = trash
++openfield = AS is ( no changes) 
++
++make it so that the objects fly to the right of the screen
+
+# 2025-11-29 06:43:29.349880
++Make it so that the environment changes depending on the Nearby Hazards input.
++Trees = more trees
++powerline = electrical powerlines ( with  2 pole  and wire connecting them)
++River/coast = River
++Loose debris = trash
++openfield = AS is ( no changes) 
++
++make it so that the objects fly to the right of the screen

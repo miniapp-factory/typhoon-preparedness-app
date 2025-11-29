@@ -55,7 +55,7 @@ export default function SimulationBox({ windSpeed, houseType, hazards }: Simulat
 
       // Roof detachment
       if (windSpeed >= 180) {
-        roofXRef.current -= 1;
+        roofXRef.current += 1;
         roofYRef.current -= 0.5;
       }
 
@@ -78,7 +78,7 @@ export default function SimulationBox({ windSpeed, houseType, hazards }: Simulat
 
       // Tree detachment
       if (windSpeed >= 180) {
-        treeXRef.current -= 1;
+        treeXRef.current += 1;
         treeYRef.current -= 0.5;
       }
 

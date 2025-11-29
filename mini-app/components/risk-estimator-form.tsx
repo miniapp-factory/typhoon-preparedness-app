@@ -35,9 +35,9 @@ export default function RiskEstimatorForm() {
   const [score, setScore] = useState<number | null>(null);
 
   const hazardOptions = [
-    "Tall trees",
-    "Power lines",
-    "River/Coast",
+    "Trees",
+    "Powerline",
+    "River",
     "Loose debris",
     "Open field",
     "None",
@@ -206,7 +206,7 @@ export default function RiskEstimatorForm() {
       </div>
       <Button onClick={calculateScore}>Simulate Risk</Button>
       {score !== null && <RiskResults score={score} />}
-      {score !== null && <SimulationBox windSpeed={Number(state.windSpeed)} houseType="wood" />}
+      {score !== null && <SimulationBox windSpeed={Number(state.windSpeed)} houseType="wood" hazards={state.hazards} />}
     </div>
   );
 }

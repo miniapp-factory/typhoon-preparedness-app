@@ -5,13 +5,15 @@ import { useEffect, useRef } from "react";
 interface SimulationBoxProps {
   windSpeed: number;
   houseType: 'wood' | 'cement';
+  hazards: string[];
 }
 
-export default function SimulationBox({ windSpeed, houseType }: SimulationBoxProps) {
+export default function SimulationBox({ windSpeed, houseType, hazards }: SimulationBoxProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const roofXRef = useRef(0);
   const roofYRef = useRef(0);
   const offsetRef = useRef(0);
+  const offsetXRef = useRef(0);
   const treeXRef = useRef(0);
   const treeYRef = useRef(0);
 
@@ -69,7 +71,7 @@ export default function SimulationBox({ windSpeed, houseType }: SimulationBoxPro
       ctx.fill();
 
       // Tree
-      const treeX = houseX - 20;
+      const treeX = houseX - 20 + offsetXRef.current;
       const treeY = houseY;
       const treeHeight = 20;
       const treeWidth = 5;
@@ -87,11 +89,25 @@ export default function SimulationBox({ windSpeed, houseType }: SimulationBoxPro
       ctx.fillRect(currentTreeX, currentTreeY - treeHeight, treeWidth, treeHeight);
       ctx.fillStyle = "#8B4513";
       ctx.fillRect(currentTreeX + treeWidth / 2 - 2, currentTreeY, 4, 5);
+      if (hazards.includes("Powerline")) {
+        const poleX = currentTreeX + 30;
+        const poleY = currentTreeY;
+        ctx.fillStyle = "#A9A9A9";
+        ctx.fillRect(poleX, poleY - 40, 5, 40);
+        ctx.fillRect(poleX + 20, poleY - 40, 5, 40);
+        ctx.strokeStyle = "#000";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(poleX + 5, poleY - 20);
+        ctx.lineTo(poleX + 25, poleY - 20);
+        ctx.stroke();
+      }
 
       // Wind lines
       const lineCount = 10;
       const speed = Math.max(1, windSpeed / 10);
       offsetRef.current = (offsetRef.current + speed) % canvas.width;
+      offsetXRef.current = (offsetXRef.current + speed) % canvas.width;
 
       ctx.strokeStyle = "#888";
       ctx.lineWidth = 2;

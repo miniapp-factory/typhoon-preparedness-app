@@ -654,3 +654,11 @@
 +openfield = AS is ( no changes) 
 +
 +make it so that the objects fly to the right of the screen
+
+# 2025-11-29 07:18:00.084030
++The roof should fly to the right of the screen,
++the trees etc. should fly only on a certain threshold(same as the roof) 
+
+# 2025-11-29 07:18:00.084571
++The roof should fly to the right of the screen,
++the trees etc. should fly only on a certain threshold(same as the roof) 

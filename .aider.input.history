@@ -624,3 +624,13 @@
 +Change "Calculate Risk" To "Simulate Risk
 +instead of expected wind Speed(km/h) do
 +expected wind Speed(km/h)[can be changed while simulating]
+
+# 2025-11-29 06:19:06.928835
++House type Should be color coded
++wood = brown
++cement = gray
+
+# 2025-11-29 06:19:06.929226
++House type Should be color coded
++wood = brown
++cement = gray

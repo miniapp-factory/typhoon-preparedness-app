@@ -206,7 +206,7 @@ export default function RiskEstimatorForm() {
       </div>
       <Button onClick={calculateScore}>Simulate Risk</Button>
       {score !== null && <RiskResults score={score} />}
-      {score !== null && <SimulationBox windSpeed={Number(state.windSpeed)} />}
+      {score !== null && <SimulationBox windSpeed={Number(state.windSpeed)} houseType="wood" />}
     </div>
   );
 }

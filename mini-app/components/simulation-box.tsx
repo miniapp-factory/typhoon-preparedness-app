@@ -4,9 +4,10 @@ import { useEffect, useRef } from "react";
 
 interface SimulationBoxProps {
   windSpeed: number;
+  houseType: 'wood' | 'cement';
 }
 
-export default function SimulationBox({ windSpeed }: SimulationBoxProps) {
+export default function SimulationBox({ windSpeed, houseType }: SimulationBoxProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const roofXRef = useRef(0);
   const roofYRef = useRef(0);
@@ -33,6 +34,7 @@ export default function SimulationBox({ windSpeed }: SimulationBoxProps) {
       const houseHeight = 30;
       const houseX = canvas.width / 2 - houseWidth / 2;
       const houseY = canvas.height - houseHeight - 10;
+      const houseColor = houseType === 'wood' ? '#A52A2A' : '#808080';
 
       // Shake house if windSpeed >= 120
       let shakeOffset = 0;
@@ -41,7 +43,7 @@ export default function SimulationBox({ windSpeed }: SimulationBoxProps) {
       }
 
       // Draw house body
-      ctx.fillStyle = "#FFF";
+      ctx.fillStyle = houseColor;
       ctx.fillRect(houseX + shakeOffset, houseY, houseWidth, houseHeight);
 
       // Roof

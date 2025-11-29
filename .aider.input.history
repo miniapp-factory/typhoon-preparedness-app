@@ -662,3 +662,11 @@
 # 2025-11-29 07:18:00.084571
 +The roof should fly to the right of the screen,
 +the trees etc. should fly only on a certain threshold(same as the roof) 
+
+# 2025-11-29 07:35:21.265750
++The trees should be stationary on the ground. it will only be uprooted once the wind is high enough.
++it should use the same logic as the roof
+
+# 2025-11-29 07:35:21.266224
++The trees should be stationary on the ground. it will only be uprooted once the wind is high enough.
++it should use the same logic as the roof

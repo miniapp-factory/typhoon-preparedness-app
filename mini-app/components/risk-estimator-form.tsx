@@ -192,7 +192,7 @@ export default function RiskEstimatorForm() {
         </Select>
       </div>
       <div>
-        <Label htmlFor="windSpeed">Expected Wind Speed (km/h)</Label>
+        <Label htmlFor="windSpeed">Expected Wind Speed(km/h)[can be changed while simulating]</Label>
         <p className="text-sm mb-1">Wind Speed: {state.windSpeed} kph</p>
         <input
           id="windSpeed"
@@ -204,7 +204,7 @@ export default function RiskEstimatorForm() {
           className="w-full"
         />
       </div>
-      <Button onClick={calculateScore}>Calculate Risk</Button>
+      <Button onClick={calculateScore}>Simulate Risk</Button>
       {score !== null && <RiskResults score={score} />}
       {score !== null && <SimulationBox windSpeed={Number(state.windSpeed)} />}
     </div>

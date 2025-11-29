@@ -71,7 +71,7 @@ export default function SimulationBox({ windSpeed, houseType, hazards }: Simulat
       ctx.fill();
 
       // Tree
-      const treeX = houseX - 20 + offsetXRef.current;
+      const treeX = windSpeed >= 180 ? houseX - 20 + offsetXRef.current : houseX - 20;
       const treeY = houseY;
       const treeHeight = 20;
       const treeWidth = 5;
